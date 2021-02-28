@@ -4,7 +4,7 @@
  */
     .text
     .align 2
-#ifndef BH_PLATFORM_DARWIN
+#ifndef __apple_build_version__
 .globl invokeNative
     .type    invokeNative, @function
 invokeNative:

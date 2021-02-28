@@ -4,7 +4,7 @@
  */
         .text
         .align  2
-#ifndef BH_PLATFORM_DARWIN
+#ifndef __apple_build_version__
         .globl invokeNative
         .type  invokeNative, function
 invokeNative:
@@ -66,7 +66,7 @@ loop_args:                      /* copy left arguments to stack */
         b       loop_args
 
 call_func:
-        blx     ip
+        bx     ip
         add     sp, sp, r6       /* restore sp */
 
 return:

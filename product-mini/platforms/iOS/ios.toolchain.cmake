@@ -512,7 +512,9 @@ else()
 endif()
 # All iOS/Darwin specific settings - some may be redundant.
 set(CMAKE_MACOSX_BUNDLE YES)
+set(CMAKE_XCODE_ATTRIBUTE_CODE_SIGN_IDENTITY "")
 set(CMAKE_XCODE_ATTRIBUTE_CODE_SIGNING_REQUIRED "NO")
+set(CMAKE_XCODE_ATTRIBUTE_CODE_SIGNING_ALLOWED "NO")
 set(CMAKE_SHARED_LIBRARY_PREFIX "lib")
 set(CMAKE_SHARED_LIBRARY_SUFFIX ".dylib")
 set(CMAKE_SHARED_MODULE_PREFIX "lib")
@@ -687,9 +689,6 @@ set(CMAKE_SHARED_MODULE_LOADER_C_FLAG "-Wl,-bundle_loader,")
 set(CMAKE_SHARED_MODULE_LOADER_CXX_FLAG "-Wl,-bundle_loader,")
 set(CMAKE_FIND_LIBRARY_SUFFIXES ".tbd" ".dylib" ".so" ".a")
 set(CMAKE_SHARED_LIBRARY_SONAME_C_FLAG "-install_name")
-
-set(CMAKE_MACOSX_BUNDLE YES)
-set(CMAKE_XCODE_ATTRIBUTE_CODE_SIGNING_REQUIRED "NO")
 
 # Set the find root to the iOS developer roots and to user defined paths.
 set(CMAKE_FIND_ROOT_PATH ${CMAKE_OSX_SYSROOT_INT} ${CMAKE_PREFIX_PATH} CACHE STRING "Root path that will be prepended
